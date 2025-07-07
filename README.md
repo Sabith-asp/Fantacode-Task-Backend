@@ -27,11 +27,13 @@ cd MachineTask-Fantacode-Backend/Backend
 2. Restore Dependencies
 dotnet restore
 
-3. Run the Application
+3. Run Redis using Docker (Required for Rate Limiting)
+docker run -d --name redis-ratelimit -p 6379:6379 redis
+
+4. Run the Application
 dotnet run
 
 https://localhost:7121
-To confirm the port, check launchSettings.json.
 
 🔐 Sample Login Credentials
 Username: ameen123  
